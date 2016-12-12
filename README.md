@@ -22,6 +22,7 @@ docker build . -t <image_name>
 ## Development
 
 The following command runs the docker image in development mode.
+In development mode, only Pyramid is running to serve traffic.
 
 ```
 docker run -d --name <container_name> -p <host_port>:80 <image_name> python /app/main.py
@@ -36,6 +37,7 @@ where:
 ## Production
 
 The following command runs the docker image in production mode.
+In production mode, nginx, uwsgi and Pyramid are running to service traffic.
 
 ```
 docker run -d --name <container_name> -p <host_port>:80 <image_name>
