@@ -10,6 +10,7 @@ development_mode = (__name__ == '__main__')
 
 config = Configurator()
 config.add_route('hello', '/')
+config.add_static_view(name='static', path='/app/static')
 config.scan()
 app = config.make_wsgi_app()
 
